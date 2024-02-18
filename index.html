@@ -171,7 +171,7 @@
       <div class="hero-body">
         <img id="teaser" src="./static/images/main.png" alt="Main Image" style="width: 100%; height: auto;">
         <h2 class="subtitle has-text-centered">
-          <span class="dnerf">Programmable-Room</span> interactively creates and edits textured 3D meshes given user-specified language instructions.
+          <span class="dnerf">Programmable-Room</span> interactively creates and edits textured 3D meshes given user-specified language instructions. Using pre-defined modules, it translates the instruction into python codes which is executed in an order. The output of the last line matches the desired final output.
         </h2>
       </div>
     </div>
@@ -286,12 +286,93 @@
 
 
 <section class="section">
+    <div class="container is-max-desktop">
+      <!-- 3D Room Generation. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">3D Room Generation</h2>
+          <p>
+            <i>Programmable-Room</i> can create a textured and fully furnished 3D room mesh from a text instruction (Generating an empty room is also possible).
+            Users can specify the room shape and size; the texture of the ceiling, walls, and floor; and furniture.  
+          </p>
+          <img src="./static/images/exp_mesh.png" alt="Mesh Image" style="width: 100%; height: auto;">          
+        </div>
+       </div>
+      <!--/ 3D Room Generation. -->
+      
+      <div class="columns is-centered">
+        <!-- Generating -->
+        <div class="column">
+            <div class="content">
+              <p>
+                When Generating a textured and furnished 3D room mesh, <i>Programmable-Room</i> used an LLM to generate python codes like below. 
+                The output of each line is visualized along with the corresponding code.
+                In summary, three images (layout image, depth map, semantic map) are generated which follow the user-specified room shape, and texture.
+                Then, the three images are used as visual prompts for generating a panorama texture image, which is then folded into an empty room mesh.
+                After allocating appropriate furniture according to the room type, we gain the textured and fully furnished 3D room mesh.
+              </p>
+              <img src="./static/images/generating.png" alt="Process Image" style="width: 100%; height: auto;">
+            </div>
+          </div>
+          <!-- /Generating -->
+
+      <!-- Module List. -->
+      <div class="column">
+        
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              We developed modules for generating and editing room meshes. For each task, <i>Programmable-Room</i> used an LLM to select necessary modules and to arrange them in a logical order.
+              For editing tasks, <i>Programmable-Room</i> loads the last room elements, replaces some of the elements, and combines the new elements with the loaded ones.
+              This process is repeated until the user is satisfied. 
+            </p>
+            <img src="./static/images/modules.png" alt="Module List Image" style="width: 100%; height: auto;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Module List. -->
+
+      <div class="columns is-centered">
+        <!-- Diverse Layouts -->
+        <div class="column">
+            <div class="content">
+              <h2 class="title is-3">Diverse Shapes</h2>
+              <p>
+                One of the benefits of <i>Programmable-Room</i> is the creaetion of rooms with divese shapes. 
+                This is possible due to the new method, we developed, to generate a textured 3D room mesh from user-specified room shapes.
+              </p>
+              <img src="./static/images/exp_layout.png" alt="Layout Image" style="width: 100%; height: auto;">
+            </div>
+          </div>
+          <!-- /Diverse Layouts -->
+
+      <!-- Complex Instructions. -->
+      <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Using predifined modules, <i>Programmable-Room</i> can transfer a complicated instruction of multiple tasks into an arranged python code. 
+            </p>
+            <img src="./static/images/code.png" alt="Compex Code Image" style="width: 100%; height: auto;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Complexn Instructions. -->
+</div>
+</section>
+
+<!-- <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -303,11 +384,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -323,16 +404,16 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Animation</h2> -->
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -362,7 +443,7 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
@@ -386,8 +467,8 @@
         </div> -->
         <!--/ Re-rendering. -->
 
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
     <!--/ Animation. -->
 
 
@@ -418,8 +499,8 @@
     </div> -->
     <!--/ Concurrent Work. -->
 
-  </div>
-</section>
+  <!-- </div>
+</section> -->
 
 
 <section class="section" id="BibTeX">
