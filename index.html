@@ -290,13 +290,15 @@
     <div class="container is-max-desktop">
         <!-- 3D Room Generation. -->
         <div class="columns is-centered">
-        <div class="column is-four-fifths">
+        <!-- <div class="column is-four-fifths"> -->
           <h2 class="title is-3">3D Room Generation</h2>
           <div class="content">
             <p>
                 <i>Programmable-Room</i> can create a textured and fully furnished 3D room mesh from a text instruction (Generating an empty room is also possible).
-                Users can specify the room shape and size; the texture of the ceiling, walls, and floor; and furniture.  
+                Users can specify the room shape and size; the texture of the ceiling, walls, and floor; and furniture. When Generating a textured and furnished 3D room mesh, <i>Programmable-Room</i> uses an LLM to generate python codes like below. 
+                The output of each line is visualized along with the corresponding code. 
             </p>
+            <img src="./static/images/generating.png" alt="Process Image" style="width: 70%; height: auto; display: block; margin: auto;">
           <!-- <img src="./static/images/exp_mesh.png" alt="Mesh Image" style="width: 100%; height: auto;">   -->
           <!-- </div>        
         </div>
@@ -309,14 +311,12 @@
             <div class="content has-text-justified">  -->
 
                 <p>
-                When Generating a textured and furnished 3D room mesh, <i>Programmable-Room</i> uses an LLM to generate python codes like below. 
-                The output of each line is visualized along with the corresponding code.
                 In summary, three images (layout image, depth map, semantic map) are generated which follow the user-specified room shape, and texture.
                 Then, the three images are used as visual prompts for generating a panorama texture image, which is then folded into an empty room mesh.
                 After allocating appropriate furniture according to the room type, we gain the textured and fully furnished 3D room mesh.
                 </p>
-            <img src="./static/images/generating.png" alt="Process Image" style="width: 70%; height: auto; display: block; margin: auto;">
-            </div>
+            
+            <!-- </div> -->
         </div>
        </div>
           
