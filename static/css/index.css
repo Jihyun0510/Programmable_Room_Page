@@ -21,7 +21,6 @@ body {
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
-  text-align: center;
 }
 
 .teaser {
@@ -154,6 +153,7 @@ body {
   margin-top: 10px; /* Space between the video and the caption */
   max-width: 80%; /* Adjust based on your design preference */
   font-size: 16px; /* Adjust caption text size as needed */
+  text-align: center;
 }
 
 
