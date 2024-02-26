@@ -149,6 +149,14 @@ body {
   margin: 0 !important;
 }
 
+.video-caption {
+  margin-top: 10px; /* Space between the video and the caption */
+  max-width: 80%; /* Adjust based on your design preference */
+  font-size: 16px; /* Adjust caption text size as needed */
+}
+
+
+
 #interpolation-image-wrapper {
   width: 100%;
 }
