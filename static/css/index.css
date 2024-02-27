@@ -19,9 +19,10 @@ body {
 
 
 .teaser .hero-body {
-  padding-top: 0;
-  padding-bottom: 3rem;
+  display: flex;
   justify-content: center;
+  padding-top: 0;
+  padding-bottom: 3rem;  
 }
 
 .teaser {
