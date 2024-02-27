@@ -27,7 +27,7 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-.teaser .video-hero-body {
+.video-hero-body {
   display: flex;
   justify-content: center; /* Centers content horizontally */
   padding-top: 0;
