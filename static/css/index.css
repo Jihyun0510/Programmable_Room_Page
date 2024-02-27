@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: center; /* Centers content horizontally */
   padding-top: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   flex-direction: column; /* Optional: if you want to stack items vertically */
 }
 
