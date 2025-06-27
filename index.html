@@ -99,14 +99,14 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://github.com/Jihyun0510">Jihyun Kim</a><sup>1</sup>,</span>
+              <a href="https://github.com/Jihyun0510">Jihyun Kim</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/junho-park-461545270/">Junho Park</a><sup>1</sup>,</span>
+              <a href="https://redorangeyellowy.github.io/">Junho Park</a><sup>1*</sup>,</span>
             <span class="author-block">
-              Kyeongbo Kong</a><sup>2</sup>,
+              Kyeongbo Kong*</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              Sukju Kang</a><sup>1</sup>,
+              Sukju Kang</a><sup>1†</sup>,
             </span>
           </div>
 
@@ -115,6 +115,10 @@
             <span class="author-block"><sup>2</sup>Pusan National University</span>
           </div>
 
+        <div class="is-size-6 has-text-centered" style="margin-top: 0.5rem;">
+          (* : Equal contribution, † : Corresponding author)
+        </div>
+          
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -171,7 +175,7 @@
 <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img id="teaser" src="./static/images/teaser.pdf" alt="Main Image" style="width: 100%; height: auto;">
+        <img id="teaser" src="./static/images/teaser.png" alt="Main Image" style="width: 100%; height: auto;">
         <h2 class="subtitle has-text-centered">
           <span class="dnerf">Programmable-Room</span> interactively creates and edits textured 3D meshes given user-specified language instructions. Using pre-defined modules, it translates the instruction into python codes which is executed in an order. The output of the last line matches the desired final output.
         </h2>
@@ -343,7 +347,7 @@
                 Users can specify the room shape and size; the texture of the ceiling, walls, and floor; and furniture. When Generating a textured and furnished 3D room mesh, <i>Programmable-Room</i> uses an LLM to generate python codes like below. 
                 The output of each line is visualized along with the corresponding code. 
             </p>
-            <img src="./static/images/program_out.pdf" alt="Process Image" style="width: 65%; height: auto; display: block; margin: auto;">
+            <img src="./static/images/program_out.png" alt="Process Image" style="width: 65%; height: auto; display: block; margin: auto;">
           </div> 
 
             <div class="content has-text-justified">
@@ -359,7 +363,7 @@
                     Whereas the state-of-the-art method generates structurally unrealsitic room meshes with repetitive furniture,
                      <i>Programmable-Room</i> creates structurally plausible room meshes whose shape and texture match the instruction.
                 </p>
-                <img src="./static/images/exp_mesh.pdf" alt="Mesh Comparison Image" style="width: 100%; height: auto; display: block; margin: auto;">
+                <img src="./static/images/exp_mesh.png" alt="Mesh Comparison Image" style="width: 100%; height: auto; display: block; margin: auto;">
               </div>
         </div>
        </div>
@@ -375,7 +379,7 @@
                 For editing tasks, <i>Programmable-Room</i> loads the last room elements, generates new elements according to the new insturction, and combines the new elements with the loaded ones.
                 This process is repeated until the user is satisfied. Currently, we support room shape editing, room texture editing, and furniture editing (remove, add, replace). 
             </p>
-            <img src="./static/images/editing.pdf" alt="Editing Image" style="width: 100%; height: auto; display: block; margin: auto;">
+            <img src="./static/images/editing.png" alt="Editing Image" style="width: 100%; height: auto; display: block; margin: auto;">
            
             </div>
         </div>
@@ -390,7 +394,7 @@
                 We developed modules for generating and editing room meshes. 
                 Users can easily add a new module along with few usage examples for in-context-learning of the LLM, in order to conduct more diverse tasks.
             </p>
-            <img src="./static/images/program_modules.pdf" alt="Module List Image" style="width: 50%; height: auto; display: block; margin: auto;">
+            <img src="./static/images/program_modules.png" alt="Module List Image" style="width: 50%; height: auto; display: block; margin: auto;">
            
             </div>
             <div class="content has-text-justified">
@@ -407,7 +411,7 @@
                         In comparison with the state-of-the-art methods, PRIG generates images which better reflect the texture information. 
                         Moreover, PRIG generates more structurally coherent images. For example, unlike those of the existing methods, in the images generated by PRIG, the left and the right sides are continuous
                     </p>
-                    <img src="./static/images/exp_pano.pdf" alt="PRIG Comparison Image" style="width: 70%; height: auto; display: block; margin: auto;">
+                    <img src="./static/images/exp_pano.png" alt="PRIG Comparison Image" style="width: 70%; height: auto; display: block; margin: auto;">
                    
                     </div>
         </div>
